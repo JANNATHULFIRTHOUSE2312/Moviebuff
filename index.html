@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MovieBuff - Movie Streaming Landing Page</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Moviebuff</div>
+      <ul class="nav-links">
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="carousel">
+      <div class="carousel-card active">
+        <img src="movie banner 2.jpg" alt="Featured Movie 1"/>
+        <div class="carousel-caption">
+          <h2>Featured Movie 1</h2>
+          <p>Experience the thrill of StreamFlix Originals.</p>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <img src="pushpa banner.jpg" alt="Featured Movie 2"/>
+        <div class="carousel-caption">
+          <h2>Featured Movie 2</h2>
+          <p>New blockbuster releases every week.</p>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <img src="coolie banner.webp" alt="Featured Movie 2"/>
+        <div class="carousel-caption">
+          <h2>Featured Movie 2</h2>
+          <p>New blockbuster releases every week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="movies" id="movies">
+      <h2>Trending Movies</h2>
+      <div class="movie-list" id="movieList">
+        <!-- Movie cards will be injected here by JavaScript -->
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What is StreamFlix?</button>
+          <div class="faq-answer">StreamFlix is a modern streaming service offering the latest movies and originals.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How can I subscribe?</button>
+          <div class="faq-answer">Simply enter your email below and follow the prompts to get started.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is there a free trial?</button>
+          <div class="faq-answer">Yes! Enjoy a 7-day free trial when you sign up today.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe" id="subscribe">
+      <h2>Subscribe for Updates</h2>
+      <form id="subscriptionForm">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>© 2025 StreamFlix. All rights reserved.</div>
+      <ul>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
