@@ -1,0 +1,87 @@
+/* Reset and base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #181818; color: #fff; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #111; }
+.logo { font-size: 2rem; 
+    font-weight: bold;
+     letter-spacing: 1px; 
+     color: #e9474f; }
+.nav-links { list-style: none; 
+    display: flex; 
+    gap: 1.5rem; }
+.nav-links li a { transition: color 0.2s; }
+.nav-links li a:hover { color: #c01045; }
+
+/* Hero Carousel */
+.hero { position: relative; width: 100%;
+     overflow: hidden; 
+     max-height: 400px; }
+.carousel 
+{ display: flex; }
+.carousel-card { min-width: 100%; 
+    display: none; 
+    position: relative;
+     transition: opacity 0.8s; }
+.carousel-card img { width: 100vw; 
+    height: 400px;
+     object-fit: cover; }
+.carousel-card.active { display: block; }
+.carousel-caption { position: absolute; 
+    bottom: 20px; 
+    left: 50px; 
+    color: #fff;
+     background: rgba(0,0,0,0.4); 
+     padding: 1rem; 
+     border-radius: 8px; }
+
+/* Movies Section */
+.movies { padding: 2rem; }
+.movies h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+.movie-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
+.movie-card { background: #222; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.35); }
+.movie-card img { width: 100%; height: 270px; object-fit: cover; }
+.movie-card .movie-info { padding: 1rem; }
+.movie-title { font-weight: bold; font-size: 1.1rem; }
+.movie-desc { font-size: 0.95rem; margin-top: 0.4rem; color: #ccc; }
+
+/* FAQ */
+.faq { padding: 2rem; background: #212121; }
+.faq-list { max-width: 600px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid #333; }
+.faq-question { background: none; border: none; color: #fff; text-align: left; width: 100%; padding: 1rem; font-size: 1.07rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+.faq-question:hover { background: #111; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s; background: #181818; padding: 0 1rem; }
+.faq-item.open .faq-answer { max-height: 120px; padding: 1rem; }
+
+/* Subscription */
+.subscribe { padding: 2rem; background: #181818; text-align: center; }
+#subscriptionForm { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; }
+#email { padding: 0.7rem; border-radius: 5px; border: none; min-width: 240px; font-size: 1rem; }
+button[type="submit"] { padding: 0.7rem 2rem; border-radius: 5px; background: #e50914; color: #fff; border: none; font-size: 1.1rem; letter-spacing: 1px; cursor: pointer; transition: background 0.2s; }
+button[type="submit"]:hover { background: #b0060f; }
+.form-message { height: 1.2rem; font-size: 0.95rem; color: #fff; }
+
+/* Footer */
+footer { background: #111; padding: 1.1rem 0; }
+.footer-content { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; }
+.footer-content ul { display: flex; gap: 1.5rem; list-style: none; }
+.footer-content li a:hover { color: #e50914; }
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .movie-list { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .carousel-card img, .hero { height: 210px; }
+}
+
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; align-items: flex-start; padding: 1rem; }
+  .nav-links { flex-direction: column; gap: 0.7rem; }
+  .movie-card img { height: 160px; }
+  .carousel-card img, .hero { height: 120px; }
+  .movies, .faq, .subscribe { padding: 1.2rem }
+}
+
+.carousel-card img, .hero { height: 400px; }
